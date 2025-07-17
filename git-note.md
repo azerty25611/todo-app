@@ -105,3 +105,33 @@ git commit -m "업데이트 내용"
 
 --3. GitHub로 전송 (-> GitHub Pages가 자동 반영)
 git push
+
+
+# GitHub Pages로 만든 사이트(예시 : TODO 사이트)를 배포하는 과정
+1. 저장소 확인
+저장소 주소: https://github.com/azerty25611/todo-app
+루트 디렉토리에 다음 파일들이 있어야 함
+index.html
+style.css
+script.js
+확인 후, 다음 단계로 진행.
+2. GitHub Pages 설정
+--1. GitHub 저장소로 이동 -> todo-app 저장소 바로가기
+--2. 상단 메뉴 중 Settings 클릭
+--3. 왼쪽 메뉴에서 "Pages" 또는 "Pages(Deployments)" 클릭
+--4. 다음 항목을 설정:
+      Source: Deploy from a branch
+      Branch: master
+      Folder: / (root)   <-꼭 이거 선택
+--5. [Save] 버튼 클릭
+3. 배포 확인
+GitHub Pages는 보통 몇 초~분 내로 사이트를 배포함.
+잠시 후 아래 주소로 접속
+https://azerty25611.github.io/todo-app/
+이 주소는 GitHub 사용자 이름과 저장소 이름을 기준으로 자동 생성됨.
+4. 테스트
+위 주소로 접속해서 입력창에 할 일을 압력하고
+수정된 사항을 실행했을 때 반응이 일어나는지
+새로고침해도 로컬스토리지에 저장된 일이 그대로 나타나는지 확인.
+※만약 안 뜨거나 오류가 있다면?
+  -아직 배포가 안 됐거나, 파일 이름이 잘못되었거나(index.html은 꼭 소문자로, 정확한 이름으로), console(F12) 오류 메시지
