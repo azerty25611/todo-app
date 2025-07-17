@@ -26,6 +26,13 @@ function addTodo() {
   input.value = '';
 }
 
+// 엔터 키를 누르면 할 일을 추가하도록 설정
+input.addEventListener('keyup', function (event) {
+  if (event.key === 'Enter') {
+    addTodo(); // 엔터 키를 누르면 addTodo 함수 실행
+  }
+});
+
 // 할 일 화면에 렌더링 함수
 function renderTodo(todo) {
   const li = document.createElement('li');
