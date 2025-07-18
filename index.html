@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- 문서의 문자 인코딩을 UTF-8로 설정하여 다양한 문자와 기호가 제대로 표시되도록 함 -->
+  <meta charset="UTF-8" />
+
+  <title>TODOリスト</title>
+
+  <!-- 외부 CSS 파일(style.css)을 연결하여 페이지의 스타일을 적용 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 웹 페이지의 주요 콘텐츠를 감싸는 div 요소. 이 요소는 'container'라는 클래스를 가짐 -->
+  <div class="container">
+
+    <h1>TODOリスト</h1>
+    <h2 id="motivational">今日も頑張りましょう！</h2>
+
+    <!-- 사용자가 할 일을 입력하는 텍스트 입력 필드. -->
+     <!-- type="text" ★텍스트 입력을 받을 수 있는 입력 필드 설정 -->
+      <!-- id="todoInput" ★이 입력 필드의 고유 식별자(id)를 'todoInput'으로 설정 -->
+       <!-- placeholder="やることを入力してください..." ★입력란에 기본 안내 텍스트가 표시됨 -->
+    <input type="text" id="todoInput" placeholder="やることを入力してください..." />
+    
+    <!-- 할 일을 리스트에 추가하는 버튼. 버튼을 클릭하면 addTodo() 함수가 실행됨 -->
+    <button onclick="addTodo()">追加</button>
+    
+    <!-- 사용자가 추가한 할 일 항목들이 이 리스트(ul)에 동적으로 표시됨 -->
+    <ul id="todoList"></ul>
+  </div>
+
+  <!-- 외부 자바스크립트 파일(script.js)을 연결하여 동적 동작을 처리 -->
+  <script src="script.js"></script>
+</body>
+</html>
