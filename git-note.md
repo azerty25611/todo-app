@@ -71,7 +71,7 @@ git branch -M main
 1. https://github.com 접속하여 로그인
 2. 오른쪽 위에 있는 프로필 사진(원형 아이콘) 클릭하고 메뉴가 뜨면 Your repositories 클릭
 3. todo-app 저장소 클릭
-(저장소 목록 중에서 최근에 만든 todo-app 저장소를 찾아 클릭. 만약 보이지 않으면 우측 상단의 Sort(종류)를 바꾸면 최근 업로드한 저장소가 올라옴.
+(저장소 목록 중에서 최근에 만든 todo-app 저장소를 찾아 클릭. 만약 보이지 않으면 우측 상단의 Sort(종류)를 바꾸면 최근 업로드한 저장소가 올라옴.)
 
 
 # GitHub Pages 배포
