@@ -4,42 +4,83 @@ body {
   background-color: #f2f2f2;
   text-align: center;
   padding: 20px; /* body 안쪽에 여백을 20px 주어 공간 확보 */
+
+/*전체 페이지에 이미지로 배경 추가하기. 사진 링크는 출처 표시 없이도 상업적으로 자유롭게 사용 가능한 Wikimedia Commons의 "No restrictions" 이미지임. */
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kawaii_robot_with_heart_clipart.svg/640px-Kawaii_robot_with_heart_clipart.svg.png);
+    /*background-size: cover;         /*배경을 화면에 맞춤*/
+    /*background-repeat: no-repeat;   /*반복 없음*/
+    /*background-position: center;    /*가운데 정렬*/
 }
 
 /* .container: 전체 TODO 리스트 영역의 스타일 설정 */
 .container {
-  background-color: white;
+  /*background-color: white;*/
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgb(239, 243, 188, 0.7)); /* 그라디언트 */
   padding: 20px;
-  border-radius: 10px; /* 모서리를 둥글게(10px) 처리 */
+  border-radius: 20px; /* 모서리를 둥글게(10px) 처리 */
   display: inline-block; /* 컨텐츠 크기만큼만 영역을 차지하고, 가운데 정렬에 어울리게 함 */
+  margin: 100px auto 0; /* 상단 여백 100px, 좌우는 auto로 중앙 정렬*/
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /*부드러운 그림자 추가*/
+  border: 5px solid #229fa3; /*구름 느낌의 연한 하늘색 테두리*/
+  position: relative; /* 구름 효과를 위한 의사 요소 위치 조정 */
 }
 
 /* input: 할 일 입력 창의 스타일 */
 input {
   padding: 8px;
-  width: 200px;
+  width: 300px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 button {
-  padding: 8px 12px; /* 위아래 8px, 좌우 12px의 안쪽 여백 */
+  height: 34px;
+  /*padding: 5px 12px; /* 위아래 8px, 좌우 12px의 안쪽 여백 */
   margin-left: 5px; /* 왼쪽에 5px 간격을 줘서 input과 간격 생성 */
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 /* li: TODO 항목 하나하나의 스타일 */
 li {
   text-align: left; /* 글자를 왼쪽 정렬 (기본은 body에서 center임) */
-  margin-top: 10px; /* 위쪽 여백을 10px 줘서 항목 간 간격 생성 */
+  margin-bottom: 20px; /*항목 간 수직 간격을 늘리기 위해 추가*/
+  margin-left: -40px; /*li 요소를 왼쪽으로 10px 이동*/
+  border: 3px solid black; /*각 할 일 항목에 색 테두리 추가*/
+  background-color: rgb(255,255,255); /*각 할 일 항목에 색 추가*/
+  padding: 7px; /*테두리와 배경색이 자연스럽게 보이도록 안쪽 여백 추가*/
+  border-radius: 10px; /*테두리 모서리를 약간 둥글게*/
+  white-space: normal; /*텍스트가 길어질 경우 다음 줄로 자연스럽게 넘어감*/
+  word-break: break-word; /*단어가 길 경우 적절히 줄바꿈*/
+  max-width: 400px; /*약 30자 정도에서 줄바꿈되도록 너비 제한*/
+  display: flex; /*flex 레이아웃으로 텍스트와 버튼 정렬*/
+  align-items: center;
+  justify-content: space-between; /*텍스트와 버튼 사이 간격 최대화*/
+
 }
 
 /* li 안의 buttonL 삭제 버튼(또는 완료 버튼 등)의 스타일 */
 li button {
-  float: right; /* 버튼을 오른쪽으로 붙이기 */
-  color: red; /* 글자색을 빨간색으로 설정 (보통 삭제 버튼 등 경고 의미) */
+  /*float: right; /* 버튼을 오른쪽으로 붙이기 */
+  color: red; /* 글자색을 설정 (보통 삭제 버튼 등 경고 의미) */
   font-size: 16px;
   background-color: #fff;
   border: 1px solid red;
   cursor: pointer;
   padding: 5px;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px; /*버튼 간 간격 조정*/
+}
+
+li button.edit {
+  color: blue;
+  border: 1px solid blue;
 }
 
 /* .completed: 완료된 할 일 항목에 적용될 스타일 */

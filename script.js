@@ -56,7 +56,7 @@ function renderTodo(todo) {
   todoText.style.flexGrow = '1';
   todoText.style.wordBreak = 'break-word';
   todoText.style.whiteSpace = 'normal';
-  todoText.style.paddingRight = '80px';
+  todoText.style.paddingRight = '15px';
 
   if (todo.completed) {
     todoText.classList.add('completed');
