@@ -19,7 +19,7 @@ window.onload = function () {
   } catch (error) {
     // 데이터 불러오기가 실패하면 오류 메시지 표시
     console.error('localStorage에서 데이터를 불러오는 중 오류 발생:', error);
-    alert('할 일 목록을 불러오지 못했습니다. 다시 시도해주세요.');
+    alert('やることのリストを読み込めませんでした。もう一度試してください。');
   }
 };
 
@@ -28,7 +28,7 @@ function addTodo() {
   const text = input.value.trim(); // 입력 상자의 텍스트를 가져와 양쪽 공백 제거
   if (text === '') {
     // 아무것도 입력하지 않았으면 경고 메시지 표시
-    alert('할 일을 입력해주세요.');
+    alert('やることを入力していません。。\uD83D\uDE22');
     return;
   }
 
@@ -206,7 +206,7 @@ function updateTodoText(todo, editInput, li, todoText, editBtn, deleteBtn) {
   const newText = editInput.value.trim(); //수정된 텍스트 가져오기
   if (newText === '') {
     // 빈 텍스트면 경고 후 원래 상태로 복구
-    alert('할 일을 입력해주세요.');
+    alert('やることを入力してください。');
     todo.isEditing = false;
     li.textContent = '';
     li.appendChild(todoText);
@@ -237,6 +237,6 @@ function saveTodos() {
   } catch (error) {
     //저장 실패 시 오류 메시지
     console.error('localStorage에 저장하는 중 오류 발생:', error);
-    alert('할 일 목록을 저장하지 못했습니다.');
+    alert('やることのリストを保存できませんでした。');
   }
 }
