@@ -27,8 +27,8 @@
 3. あるいは下の配布リンクから直接使用してください。
 
 
- **配布住所 👍** : 
-https://azerty25611.github.io/todo-app/
+ **配布住所 👍**
+- https://azerty25611.github.io/todo-app/
 
 
 ## 作成者
