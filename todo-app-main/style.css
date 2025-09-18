@@ -1,0 +1,106 @@
+/* body: 웹페이지 전체에 적용되는 기본 스타일 설정 */
+body {
+  font-family: Arial, sans-serif; /* 글꼴을 Arial로 설정하고, Arial이 없으면 기본 sans-serif 사용 */
+  background-color: #f2f2f2;
+  text-align: center; /* 텍스트를 가운데 정렬 */
+  padding: 20px; /* body 안쪽에 여백을 20px 주어 공간 확보 */
+
+/*전체 페이지에 이미지로 배경 추가하기. 사진 링크는 출처 표시 없이도 상업적으로 자유롭게 사용 가능한 Wikimedia Commons의 "No restrictions" 이미지임. */
+    /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kawaii_robot_with_heart_clipart.svg/640px-Kawaii_robot_with_heart_clipart.svg.png);*/
+    /*background-size: cover;         /*배경을 화면에 맞춤*/
+    /*background-repeat: no-repeat;   /*반복 없음*/
+    /*background-position: center;    /*가운데 정렬*/
+}
+
+/* .container: 전체 TODO 리스트 영역의 스타일 설정 */
+.container {
+  /*background-color: white;*/
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgb(239, 243, 188, 0.7)); /* 그라디언트 */
+  padding: 20px; /* 박스 안쪽 여백 */
+  border-radius: 20px; /* 모서리를 둥글게 처리 */
+  display: inline-block; /* 컨텐츠 크기만큼만 영역을 차지하고, 가운데 정렬에 어울리게 함 */
+  margin: 100px auto 0; /* 상단 여백 100px, 좌우는 auto로 중앙 정렬*/
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /*부드러운 그림자 추가*/
+  border: 5px solid #229fa3; /* 색 테두리*/
+}
+
+/* input: 할 일 입력 창의 스타일 */
+input {
+  padding: 8px; /* 안쪽 여백 */
+  width: 300px; /* 너비 */
+  height: 15px; /* 높이 */
+  border: 2px solid black; /* 테두리 색과 굵기 */
+  border-radius: 5px; /* 살짝 둥근 테두리 */
+}
+
+button {
+  height: 34px; /* 버튼 높이 */
+  margin-left: 5px; /* 왼쪽에 5px 간격을 줘서 input과 간격 생성 */
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* li: TODO 항목 하나하나의 스타일 */
+li {
+  text-align: left; /* 글자를 왼쪽 정렬 (기본은 body에서 center임) */
+  margin-bottom: 20px; /* 항목 간 아래쪽 간격 */
+  margin-left: -25px; /* 항목을 약간 왼쪽으로 이동 */
+  border: 3px solid black; /*각 할 일 항목에 색 테두리 추가*/
+  background-color: rgb(255,255,255); /*각 할 일 항목에 색 추가*/
+  padding: 7px; /*테두리와 배경색이 자연스럽게 보이도록 안쪽 여백 추가*/
+  border-radius: 10px; /*테두리 모서리를 약간 둥글게*/
+  white-space: normal; /*텍스트가 길어질 경우 다음 줄로 자연스럽게 넘어감*/
+  word-break: break-word; /*단어가 길 경우 적절히 줄바꿈*/
+  max-width: 400px; /* 내용이 어느 정도에서 줄바꿈되도록 너비 제한*/
+  display: flex; /* 텍스트와 버튼을 가로로 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: space-between; /*텍스트와 버튼 사이 간격 최대화*/
+
+}
+
+/* li 안의 buttonL 삭제 버튼(또는 완료 버튼 등)의 스타일 */
+li button {
+  color: red; /* 글자색을 설정 (보통 삭제 버튼 등 경고 의미) */
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid red;
+  cursor: pointer; /* 마우스 커서를 손 모양으로 */
+  padding: 5px; /* 안쪽 여백 */
+  border-radius: 4px; /* 둥근 테두리 */
+  width: 30px; /* 버튼 크기 */
+  height: 30px;
+  display: flex; /* 버튼 내부 정렬 */
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px; /*버튼 간 간격 조정*/
+}
+
+/* 수정 버튼의 디자인 */
+li button.edit {
+  color: blue; /* 글자색 */
+  border: 1px solid blue; /*글자 테두리*/
+}
+
+/* .completed: 완료된 할 일 항목에 적용될 스타일 */
+.completed {
+  text-decoration: line-through; /* 텍스트에 취소선(가로줄)을 긋기 */
+  color: gray;
+}
+
+/* 'TODOリスト' 텍스트 스타일 */
+h1 {
+  font-size: 70px; /* 글씨 크기를 설정 */
+  font-weight: bold; /* 글씨를 굵게 */
+  color: palevioletred;
+  -webkit-text-stroke: 1.5px black; /* 글자 테두리 두꼐와 색상 */
+  margin-bottom: 20px; /* 아래 여백 추가 (선택 사항) */
+}
+
+/* '今日も頑張りましょう！' 텍스트 스타일 */
+#motivational {
+  font-family: 'Arial', sans-serif; /*글꼴*/
+  font-size: 40px;
+  color: plum;
+  margin-top: 10px; /* 위쪽 여백 */
+  font-weight: bold; /* 굵은 글씨 */
+}
